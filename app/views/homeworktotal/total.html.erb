@@ -1,1 +1,30 @@
-<%= stylesheet_link_tag 'biologies', media: 'all', 'data-turbolinks-track': 'reload' %>
+<h1>Biology</h1>
+</br>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Description</th>
+      <th>Due date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @biologies.each do |biology| %>
+    <% if biology.user == current_user %>
+      <tr>
+        <td><%= biology.teacher %></td>
+        <td><%= biology.description %></td>
+        <td><%= biology.due_date %></td>
+        <td><%= link_to 'Show', biology, class:"btn btn-primary btn-sm" %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<!%= stylesheet_link_tag 'biologies', media: 'all', 'data-turbolinks-track': 'reload' %>
