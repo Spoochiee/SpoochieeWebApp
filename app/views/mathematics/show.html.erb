@@ -1,0 +1,38 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row justify-content-center">
+  <div class="col-3">
+    <div class="p-3 mb-2 bg-dark bg-gradient my-background">
+		<div class="card">
+		  <div class="card-body">
+		    <h5 class="card-title">
+		    	<p>
+		 		 	<strong>Teacher:</strong>
+		 			<%= @mathematic.teacher %>
+				</p>
+			</h5>
+		    <h6 class="card-subtitle mb-2 text-muted">
+		    	<p>
+		 			<strong>Due date:</strong>
+		  			<%= @mathematic.due_date %>
+				</p>
+		    </h6>
+			
+			<p>
+		  		<strong>Description:</strong>
+		 		<%= @mathematic.description %>
+		 	</p>
+			<div class="btn-group">
+				<%= link_to 'Edit', edit_mathematic_path(@mathematic), class:"btn btn-dark btn-sm" %> 
+				<%= link_to 'Back', mathematics_path, class:"btn btn-dark btn-sm" %>
+			</div>
+		  </div>
+		</div>
+	</div>
+  </div>
+</div>
+<%= stylesheet_link_tag 'homeworktotal', media: 'all', 'data-turbolinks-track': 'reload' %>

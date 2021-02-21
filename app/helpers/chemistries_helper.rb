@@ -1,0 +1,2 @@
+module ChemistriesHelper
+end

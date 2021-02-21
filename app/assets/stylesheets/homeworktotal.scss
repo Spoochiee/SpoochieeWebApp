@@ -1,0 +1,21 @@
+body {
+    background-image: url('https://i.ibb.co/L8nYcty/wp3589969.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+head {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+}
+
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,18 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row justify-content-center">
+  <div class="col-3">
+    <div class="p-3 mb-2 bg-dark bg-gradient my-background">
+		<h1>New Task</h1>
+
+		<%= render 'form', chemistry: @chemistry %>
+
+		<%= link_to 'Back', chemistries_path, class:"btn btn-dark btn-sm" %>
+	</div>
+  </div>	
+</div>		
+<%= stylesheet_link_tag 'homeworktotal', media: 'all', 'data-turbolinks-track': 'reload' %>

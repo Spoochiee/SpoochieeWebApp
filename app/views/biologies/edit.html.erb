@@ -1,0 +1,21 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row justify-content-center">
+  <div class="col-3">
+    <div class="p-3 mb-2 bg-dark bg-gradient my-background">
+		<h1>Editing Task</h1>
+
+		<%= render 'form', biology: @biology %>
+
+		<div class="btn-group">
+			<%= link_to 'Show', @biology, class:"btn btn-dark btn-sm" %> 
+			<%= link_to 'Back', biologies_path, class:"btn btn-dark btn-sm" %>
+		</div>
+	</div>
+  </div>
+</div>
+<%= stylesheet_link_tag 'homeworktotal', media: 'all', 'data-turbolinks-track': 'reload' %>

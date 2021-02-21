@@ -1,0 +1,34 @@
+
+<h1>Mathematics</h1>
+</br>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Description</th>
+      <th>Due date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mathematics.each do |mathematic| %>
+    <% if mathematic.user == current_user %>
+      <tr>
+        <td><%= mathematic.teacher %></td>
+        <td><%= mathematic.description %></td>
+        <td><%= mathematic.due_date %></td>
+        <td><%= link_to 'Show', mathematic, class:"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_mathematic_path(mathematic), class:"btn btn-warning btn-sm" %></td>
+        <td><%= link_to 'Destroy', mathematic, class:"btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Homework', new_mathematic_path, class:"btn btn-dark" %>
+
+<%= stylesheet_link_tag 'homeworktotal', media: 'all', 'data-turbolinks-track': 'reload' %>

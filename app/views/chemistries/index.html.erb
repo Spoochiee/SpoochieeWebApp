@@ -1,0 +1,34 @@
+
+<h1>Chemistry</h1>
+</br>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Description</th>
+      <th>Due date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chemistries.each do |chemistry| %>
+    <% if chemistry.user == current_user %>
+      <tr>
+        <td><%= chemistry.teacher %></td>
+        <td><%= chemistry.description %></td>
+        <td><%= chemistry.due_date %></td>
+        <td><%= link_to 'Show', chemistry, class:"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_chemistry_path(chemistry), class:"btn btn-warning btn-sm" %></td>
+        <td><%= link_to 'Destroy', chemistry, class:"btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Homework', new_chemistry_path, class:"btn btn-dark" %>
+
+<%= stylesheet_link_tag 'homeworktotal', media: 'all', 'data-turbolinks-track': 'reload' %>

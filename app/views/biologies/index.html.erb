@@ -1,0 +1,35 @@
+
+<h1>Biology</h1>
+</br>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Description</th>
+      <th>Due date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @biologies.each do |biology| %>
+    <% if biology.user == current_user %>
+      <tr>
+        <td><%= biology.teacher %></td>
+        <td><%= biology.description %></td>
+        <td><%= biology.due_date %></td>
+        <td><%= link_to 'Show', biology, class:"btn btn-primary btn-sm" %></td>
+        
+        <td><%= link_to 'Edit', edit_biology_path(biology), class:"btn btn-warning btn-sm" %></td>
+        <td><%= link_to 'Destroy', biology, class:"btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Homework', new_biology_path, class:"btn btn-dark" %>
+
+<%= stylesheet_link_tag 'homeworktotal', media: 'all', 'data-turbolinks-track': 'reload' %>
