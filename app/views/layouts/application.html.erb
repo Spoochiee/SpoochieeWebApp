@@ -23,10 +23,11 @@
     <%= render 'home/brand' %>
     <%= render 'home/header' %>
     <br/>
-    <% if notice %>
-      <%= render 'layouts/alerts' %>
-    <% end %> 
     <div class="container-fluid">
+      <% if notice %>
+        <%= render 'layouts/alerts' %>
+      <% end %> 
+      <br/>
       <%= yield %>
     </div>    
   </head>
